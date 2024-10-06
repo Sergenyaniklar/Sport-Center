@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spor Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+  <!-- navbar kısmı ve hamburger menü yeri -->
+  <div class="heroback">
+  <header class="header">
+    <nav class="navbar" id="navbar">
+      <img class="logo" src="img/logo.png" alt="logo">
+     <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#review">Review</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" class="join-us">Join Us</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </nav>
+   </header>
+
+   <!-- arkaya verilen görseli koyup üzerine içeriğin yazdığı navbarın altındaki bölüm -->
+   <section class="hero">
+    <div class="hero-content">
+      <div class="power-div">
+      <a class="power-a" href="">POWERFULL</a>
+      </div>
+      <h2>Group <br> Practice <br> With Trainer</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Delectus iure nulla quibusdam error accusamus aspernatur 
+        illo quis voluptatem sit veniam! Odit inventore repellat 
+        in est! Officiis tenetur nesciunt?</p>
+      <div class="buttons">
+        <button class="btn-1">Sign Up</button>
+        <button class="btn-2">Details</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- main başlangıcı -->
+<main>
+<!-- içeriğinde spor centerla ilgili bilgilendirme sayıları olan 4 kutunun dizili olduğu yer -->
+<section class="stats">
+  <div class="stat-item">
+      <h3>325</h3>
+      <p>Course</p>
+  </div>
+  <div class="stat-item">
+      <h3>405</h3>
+      <p>Work Out</p>
+  </div>
+  <div class="stat-item">
+      <h3>305</h3>
+      <p>Working Hour</p>
+  </div>
+  <div class="stat-item">
+      <h3>705</h3>
+      <p>Happy Client</p>
+  </div>
+</section>
+
+<!-- kurs programının bulunduğu bölüm -->
+<section id="classes" class="classes">
+  <div class="back-shape"></div>
+  <div class="container">
+  <h2>OUR CLASSES</h2>
+  <div class="line"></div>
+  <p class="p-our">Lorem Ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney <br> College. Lorem ipsum dolor sit amet.</p>
+  <br>
+  <div class="class-buttons">
+      <button class="active dropdown-btn" onclick="showContent('yoga')">Yoga</button>
+      <button class="dropdown-btn" onclick="showContent('group')">Group</button>
+      <button class="dropdown-btn" onclick="showContent('solo')">Solo</button>
+      <button class="dropdown-btn" onclick="showContent('stretching')">Stretching</button>
+  </div>
+  <div class="content" id="content-area">
+      <div class="yogap">
+      <h3>Why are your Yoga?</h3>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Pariatur possimus voluptatum impedit odit perferendis <br> dolorum placeat. Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit. Debitis, facilis!</p>
+      <br>
+      <h4>When comes Yoga Your Time.</h4>
+      <br>
+      <p>Saturday–Sunday: 8:00am – 10:00am</p>
+      <br>
+      <p>Monday–Tuesday: 10:00am – 12:00pm</p>
+      <br>
+      <p>Wednesday–Friday: 3:00pm – 6:00pm</p>
+      <br>
+    </div>
+      <img src="img/yoga.jpg" alt="Yoga" class="class-image">
+    </div>
+  </div>
+</section>
+
+
+<!-- kilo boy hesaplama bölümü -->
+<div class="container-1">
+  <div class="bmı-all">
+  <h1>BMI Hesaplayıcı</h1>
+  <div class="bmı-p">
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Consequatur error ad natus quia incidunt suscipit est aspernatur, <br> animi vitae quae autem minima facilis temporibus aperiam nobis ut <br> voluptate placeat molestiae!</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Voluptatem ex quas dolorem quidem ipsam ducimus molestias <br> consectetur  explicabo omnis corrupti, magni ipsum quae corporis, <br> vero in,  inventore iste sint nostrum.</p>
+  </div>
+  <div class="bmi-calculator">
+    <input type="number" id="height" placeholder="Your Height">
+    <label for="height">cm</label>
+    <input type="number" id="weight" placeholder="Your Weight">
+    <label for="weight">kg</label>
+  </div>
+  </div>
+  <div class="bmi-chart">
+    <h1 class="bmıh1">Your BMI</h1>
+    <img src="img/bmi-index.jpg" alt="BMI Grafiği">
+    <div class="result-1">
+    <button class="result-2" onclick="calculateBMI()"><span class="material-symbols-outlined">
+      arrow_circle_down
+      </span></button>
+    <div class="result-3" id="result"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- kurs hocaları hakkında bilgi verilen bölüm -->
+<div id="trainers" class="trainers-section">
+  <h2>OUR BEST TRAINERS</h2>
+  <div class="line2"></div>
+  <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney College.</p>
+  
+  <div class="trainers-cards">
+      <div class="trainer-card">
+          <img src="img/trainer1.jpg" alt="Trainer 1" class="main-image">
+          <div class="border-line top"></div>
+          <div class="border-line bottom"></div>
+          <div class="border-line left"></div>
+          <div class="border-line right"></div>
+          <div class="card-info">
+              <h3>Burcu</h3>
+              <p>Cardio Trainer</p>
+          </div>
+      </div>
+
+      <div class="trainer-card">
+          <img src="img/trainer2.jpg" alt="Trainer 2" class="main-image"> 
+          <div class="border-line top"></div>
+          <div class="border-line bottom"></div>
+          <div class="border-line left"></div>
+          <div class="border-line right"></div>
+          <div class="card-info">
+              <h3>Alican</h3>
+              <p>Strength Trainer</p>
+          </div>
+      </div>
+
+      <div class="trainer-card">
+          <img src="img/trainer3.jpg" alt="Trainer 3" class="main-image">
+          <div class="border-line top"></div>
+          <div class="border-line bottom"></div>
+          <div class="border-line left"></div>
+          <div class="border-line right"></div>
+          <div class="card-info">
+              <h3>Jane Doe</h3>
+              <p>Cardio Trainer</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- satın alınacak ürünlerle ilgili bilgilendirme bölümü -->
+<div class="container2">
+  <div class="traniner-line">
+  <h2>PURCHASE FROM US</h2>
+  <div class="line2"></div>
+  <p class="purchasep">Lorem Ipsum is not simply random text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, aspernatur? <br> It has roots in a piece of classical at Hampden-Sydney College.</p>
+  </div>
+  <div class="product-grid">
+  <div class="product-card">
+      <img src="img/purchase1.jpg" alt="Kettlebell 5kg" class="product-image">
+      <div class="product-info">
+          <h3 class="product-name">Kettlebell / 5kg</h3>
+          <div class="product-price">
+              <span class="original-price">89,99$</span>
+              <span style="font-size: large;">/</span>
+              <span class="discounted-price">59,99$</span>
+          </div>
+          <div class="addcard">
+          <span class="material-symbols-outlined">
+            shopping_cart
+            </span>
+          <button class="add-to-cart"> Add To Cart</button>
+        </div>
+      </div>
+  </div>
+  <div class="product-card">
+      <img src="img/purchase2.jpg" alt="Treadmill" class="product-image">
+      <div class="product-info">
+          <h3 class="product-name">Treadmill</h3>
+          <div class="product-price">
+              <span class="original-price">899,99$</span>
+              <span style="font-size: large;">/</span>
+              <span class="discounted-price">599,99$</span>
+          </div>
+          <div class="addcard">
+            <span class="material-symbols-outlined">
+              shopping_cart
+              </span>
+            <button class="add-to-cart"> Add To Cart</button>
+          </div>
+      </div>
+  </div>
+  <div class="product-card">
+      <img src="img/purchase3.jpg" alt="Adjustable Dumbbell" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">Adjustable Dumbbell</h3>
+        <div class="product-price">
+              <span class="original-price">89,99$</span>
+              <span style="font-size: large;">/</span>
+              <span class="discounted-price">59,99$</span>
+          </div>
+          <div class="addcard">
+            <span class="material-symbols-outlined">
+              shopping_cart
+              </span>
+            <button class="add-to-cart"> Add To Cart</button>
+          </div>
+        </div>
+  </div>
+  <div class="product-card">
+      <img src="img/purchase4.jpg" alt="Kettlebell 3kg" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">Kettlebell / 3kg</h3>
+          <div class="product-price">
+              <span class="original-price">89,99$</span>
+              <span style="font-size: large;">/</span>
+              <span class="discounted-price">59,99$</span>
+          </div>
+          <div class="addcard">
+            <span class="material-symbols-outlined">
+              shopping_cart
+              </span>
+            <button class="add-to-cart"> Add To Cart</button>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+<!-- müşteri yorumları -->
+<div id="review" class="container3">
+  <div class="traniner-client">
+    <h2>REVİEW CLİENT</h2>
+    <div class="line2"></div>
+    <p class="purc">Lorem Ipsum is not simply random text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, aspernatur? <br> It has roots in a piece of classical at Hampden-Sydney College.</p>
+    </div>
+  <div class="review">
+  <div class="card3">
+      <div class="profile">
+          <img src="img/client1.jpg" alt="Diet Expert">
+          <div class="name">Diet Expert</div>
+          <div class="title">CFO</div>
+      </div>
+      <div class="speech-bubble">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, sequi quia, libero voluptatibus ducimus earum quidem minus eveniet, ex esse rem sed numquam. Error magnam in vero molestiae tempora nostrum.</p>
+          <div class="üçgen1"></div>       
+      </div>
+  </div>
+  <div class="card4">
+      <div class="profile">
+          <img src="img/client2.jpg" alt="Cardio Trainer">
+          <div class="name">Cardio Trainer</div>
+          <div class="title">CEO</div>
+      </div>
+      <div class="speech-bubble">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, sequi quia, libero voluptatibus ducimus earum quidem minus eveniet, ex esse rem sed numquam. Error magnam in vero molestiae tempora nostrum.</p>
+          <div class="üçgen1"></div>
+      </div>
+  </div>
+  </div>
+</div>
+
+
+<div id="contact">
+<div class="traniner-line">
+  <h2>CONTACT US</h2>
+  <div class="line2"></div>
+  <p class="purccontact">Lorem Ipsum is not simply random text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, aspernatur? <br> It has roots in a piece of classical at Hampden-Sydney College.</p>
+</div>
+<div class="contact-section">
+  <div class="contact-info">
+      <p><strong>Mobile Number Email Address</strong></p>
+      <p><strong>+135 773 321 4442  demo@demo.com</strong></p>
+      <h2>Make An Appointment</h2>
+      <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+      </form>
+  </div>
+
+  <div class="map-section">
+      <!-- Google Maps Embed or Static Map will go here -->
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47763.67457272848!2d35.864406713363024!3d41.56427386799142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4088984b9dfe0e95%3A0xdd34bf6997b023ed!2sBafra%2C%20Samsun!5e0!3m2!1str!2str!4v1728082184088!5m2!1str!2str" 
+       width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+</div>
+</main>
+<!-- main bölümünün bitişi -->
+
+<!-- footer bölümünün başlangıcı -->
+<footer class="footer">
+  <div class="footerdiv">
+  <div class="logo"><img src="img/logo.png" alt="logofooter"></div>
+  <p class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quod, quae, voluptate, voluptas quia quibusdam voluptatibus quos doloribus quidem fugiat. Quisquam voluptatum, quod, quae, voluptate, voluptas quia quibusdam voluptatibus quos doloribus quidem fugiat.
+  </p>
+  <div class="footerli">
+      <div class="footerinfo">
+          <h3>Information</h3>
+          <ul>
+              <li>About Us</li>
+              <li>Classes</li>
+              <li>Blog</li>
+              <li>Contact</li>
+          </ul>
+      </div>
+      <div class="footerinfo">
+          <h3>Helpful Links</h3>
+          <ul>
+              <li>Services</li>
+              <li>Supports</li>
+              <li>Terms & Condition</li>
+              <li>Privacy Policy</li>
+          </ul>
+      </div>
+  </div>
+</div>
+</footer>
+<!-- footer bölümünün bitişi -->
+<script src="script.js"></script>
+</body>
+</html>
+  
+
