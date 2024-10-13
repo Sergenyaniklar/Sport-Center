@@ -106,32 +106,40 @@
 
 
 <!-- kilo boy hesaplama bölümü -->
-<div class="container-1">
-  <div class="bmı-all">
-  <h1>BMI Hesaplayıcı</h1>
-  <div class="bmı-p">
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Consequatur error ad natus quia incidunt suscipit est aspernatur, <br> animi vitae quae autem minima facilis temporibus aperiam nobis ut <br> voluptate placeat molestiae!</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Voluptatem ex quas dolorem quidem ipsam ducimus molestias <br> consectetur  explicabo omnis corrupti, magni ipsum quae corporis, <br> vero in,  inventore iste sint nostrum.</p>
-  </div>
-  <div class="bmi-calculator">
-    <input type="number" id="height" placeholder="Your Height">
-    <label for="height">cm</label>
-    <input type="number" id="weight" placeholder="Your Weight">
-    <label for="weight">kg</label>
-  </div>
-  </div>
-  <div class="bmi-chart">
-    <h1 class="bmıh1">Your BMI</h1>
-    <img src="img/bmi-index.jpg" alt="BMI Grafiği">
-    <div class="result-1">
-    <button class="result-2" onclick="calculateBMI()"><span class="material-symbols-outlined">
-      arrow_circle_down
-      </span></button>
-    <div class="result-3" id="result"></div>
+ <div class="bmıcontainer">
+  <div class="bmıcalcu">
+<h1>BMI Calculator</h1>
+<br>
+<br>
+    <div class="lorem-text">
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        <br>
+        <br>
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
     </div>
+    <div class="calculator">
+        <div class="input-section">
+            <div class="input-group">
+                <input type="number" id="height" placeholder="Your height" step="1" oninput="calculateBMI()">
+                <span class="unit">cm</span>
+            </div>
+            <div class="input-group">
+                <input type="number" id="weight" placeholder="Your weight" step="0.1" oninput="calculateBMI()">
+                <span class="unit">kg</span>
+            </div>
+        </div>
+      </div>
+      </div>
+        <div class="result-section">
+            <div class="bmi-chart">
+              <h1>YOUR BMI</h1>
+                <img src="img/bmi-index.jpg" alt="BMI Chart">
+                <div id="bmi-result"></div>
+                <div id="bmi-arrow"></div>
+            </div>
+        </div>
+    
   </div>
-</div>
-
 
 <!-- kurs hocaları hakkında bilgi verilen bölüm -->
 <div id="trainers" class="trainers-section">
@@ -139,44 +147,47 @@
   <div class="line2"></div>
   <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney College.</p>
   
-  <div class="trainers-cards">
-      <div class="trainer-card">
-          <img src="img/trainer1.jpg" alt="Trainer 1" class="main-image">
-          <div class="border-line top"></div>
-          <div class="border-line bottom"></div>
-          <div class="border-line left"></div>
-          <div class="border-line right"></div>
-          <div class="card-info">
-              <h3>Burcu</h3>
-              <p>Cardio Trainer</p>
-          </div>
+  <div class="trainer3">
+    <div class="image-container">
+        <img src="img/trainer1.jpg" alt="Person with dumbbells" class="styled-image">
+        <div class="card-info">
+          <h3>Julia Roberts</h3>
+          <p>Exercise Trainer</p>
+        </div>
+        <div class="border-vertical left"></div>
+        <div class="border-vertical right"></div>
+        <div class="border-horizontal top"></div>
+        <div class="border-horizontal bottom"></div>
       </div>
-
-      <div class="trainer-card">
-          <img src="img/trainer2.jpg" alt="Trainer 2" class="main-image"> 
-          <div class="border-line top"></div>
-          <div class="border-line bottom"></div>
-          <div class="border-line left"></div>
-          <div class="border-line right"></div>
-          <div class="card-info">
-              <h3>Alican</h3>
-              <p>Strength Trainer</p>
-          </div>
+   
+    
+      <div class="image-container">
+        <img src="img/trainer2.jpg" alt="Person with dumbbells" class="styled-image">
+        <div class="card-info">
+          <h3>Sergio Gonzalez</h3>
+          <p>Fitness Trainer</p>
+        </div>
+        <div class="border-vertical left"></div>
+        <div class="border-vertical right"></div>
+        <div class="border-horizontal top"></div>
+        <div class="border-horizontal bottom"></div>
       </div>
-
-      <div class="trainer-card">
-          <img src="img/trainer3.jpg" alt="Trainer 3" class="main-image">
-          <div class="border-line top"></div>
-          <div class="border-line bottom"></div>
-          <div class="border-line left"></div>
-          <div class="border-line right"></div>
-          <div class="card-info">
-              <h3>Jane Doe</h3>
-              <p>Cardio Trainer</p>
-          </div>
-      </div>
+    
+    
+      <div class="image-container">
+        <img src="img/trainer3.jpg" alt="Person with dumbbells" class="styled-image">
+    <div class="card-info">
+      <h3>Jane Doe</h3>
+      <p>Cardio Trainer</p>
+    </div>
+        <div class="border-vertical left"></div>
+        <div class="border-vertical right"></div>
+        <div class="border-horizontal top"></div>
+        <div class="border-horizontal bottom"></div>
+        </div>
   </div>
-</div>
+  </div>
+
 
 <!-- satın alınacak ürünlerle ilgili bilgilendirme bölümü -->
 <div class="container2">
@@ -272,8 +283,7 @@
           <div class="title">CFO</div>
       </div>
       <div class="speech-bubble">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, sequi quia, libero voluptatibus ducimus earum quidem minus eveniet, ex esse rem sed numquam. Error magnam in vero molestiae tempora nostrum.</p>
-          <div class="üçgen1"></div>       
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, sequi quia, libero voluptatibus ducimus earum quidem minus eveniet, ex esse rem sed numquam. Error magnam in vero molestiae tempora nostrum.</p>      
       </div>
   </div>
   <div class="card4">
@@ -284,7 +294,6 @@
       </div>
       <div class="speech-bubble">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, sequi quia, libero voluptatibus ducimus earum quidem minus eveniet, ex esse rem sed numquam. Error magnam in vero molestiae tempora nostrum.</p>
-          <div class="üçgen1"></div>
       </div>
   </div>
   </div>

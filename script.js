@@ -93,31 +93,42 @@ function showContent(className) {
   }
 }
 
-function toggleDropdown() {
-    const button = document.querySelector('.dropdown-btn');
-    button.classList.toggle('active');
+function calculateBMI() {
+  const height = document.getElementById('height').value / 100; // convert cm to m
+  const weight = document.getElementById('weight').value;
+  const bmiResult = document.getElementById('bmi-result');
+  const bmiArrow = document.getElementById('bmi-arrow');
+  
+  if (height > 0 && weight > 0) {
+      const bmi = weight / (height * height);
+      
+      let category;
+      let arrowPosition;
+      
+      if (bmi < 18.5) {
+          category = "Underweight";
+          arrowPosition = 10;
+      } else if (bmi < 25) {
+          category = "Normal";
+          arrowPosition = 30;
+      } else if (bmi < 30) {
+          category = "Overweight";
+          arrowPosition = 50;
+      } else if (bmi < 35) {
+          category = "Obese";
+          arrowPosition = 70;
+      } else {
+          category = "Extremely Obese";
+          arrowPosition = 90;
+      }
+      
+      bmiResult.textContent = `${bmi.toFixed(2)} ${category}`;
+      bmiArrow.style.left = `${arrowPosition}%`;
+  } else {
+      bmiResult.textContent = "";
+      bmiArrow.style.left = "0%";
   }
-  
-  function calculateBMI() {
-    const height = document.getElementById('height').value;
-    const weight = document.getElementById('weight').value;
-  
-    const bmi = weight / ((height/100) * (height/100));
-    const resultElement = document.getElementById('result');
-  
-    resultElement.textContent = `BMI: ${bmi.toFixed(2)}`;
-  
-    // BMI değerine göre yorum ekleme
-    if (bmi < 18.5) {
-      resultElement.textContent += " (Zayıf)";
-    } else if (bmi < 25) {
-      resultElement.textContent += " (Normal)";
-    } else if (bmi < 30) {
-      resultElement.textContent += " (Kilolu)";
-    } else {
-      resultElement.textContent += " (Obez)";
-    }
-  }
+}
 
   
   function toggleMenu() {

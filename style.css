@@ -313,69 +313,86 @@ h2{
 
 
 /* kilo boy hesaplama bölümü */
-.container-1 {
+.bmıcontainer {
   display: flex;
-  flex-direction: column;
-  padding: 50px;
-  margin-top: 100px;
+  width: 100%;
+  height: 350px;
+  margin-top: 140px;
 }
 
-.bmi-calculator {
+.bmıcalcu {
+  margin-left: 200px;
+  margin-right: 180px;
+}
+
+.bmıcalcu h1 {
+  color: #4a6da7;
+}
+.calculator {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+}
+.input-section {
+  width: 95%;
+  display: flex;
+}
+.result-section {
+  margin-right: 200px;
+  text-align: center;
+  width: 50%;
+  position: relative;
+}
+input {
+  width: calc(100% - 40px);
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.input-group {
+  display: flex;
   align-items: center;
+}
+.unit {
+  margin-left: 10px;
+}
+.bmi-chart {
+  position: relative;
+}
+
+.bmi-chart h1 {
   margin-bottom: 30px;
-  margin-top: 20px;
-  gap: 10px;
-}
-.bmı-all{
-  margin-left: 160px;
-}
-
-.bmi-chart{
- display: flex;
- margin-top: 90px;
- margin-left: -40px;
-}
-
-.bmı-p{
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-  gap: 30px;
 }
 
 .bmi-chart img {
-  position: relative;
-  margin-left: 700px;
-  margin-top: -380px;
-  width: 500px;
-  height: 300px;
+  width: 110%;
+  height: auto;
 }
-.result-1{
-  display: flex;
-  margin-top: -140px;
-  margin-left: -90px;
-  
-}
-.result-2{
-  background-color: rgb(255, 255, 255);
-  border: none;
-}
-
-.result-3{
-  margin-top: 90px;
-  margin-left: -50px;
-}
-.result-2 span{
-  background-color: orange;
-}
-.bmıh1 {
+#bmi-arrow {
   position: absolute;
-  margin-left: 900px;
-  margin-top: -430px;
+  bottom: -15px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 0px solid transparent;
+  border-bottom: 20px solid #FFA500;
+  transition: left 0.5s;
 }
-
+#bmi-result {
+  position: absolute;
+  margin-top: 30px;
+  margin-right: 80px;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FF4500;
+}
+.lorem-text {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
 
 /* kurs hocaları hakkında bilgi verilen bölüm */
 .trainers-section {
@@ -383,6 +400,7 @@ h2{
   text-align: center;
   flex-direction: column;
   align-items: center;
+  height: 700px;
   padding: 40px 0;
   background-color: #e1e1ec;
   margin-bottom: 50px;
@@ -408,51 +426,35 @@ h2{
   color: #555;
 }
 
-
-.trainers-cards {
+.trainer3{
   display: flex;
-  justify-content: center;
-  position: relative;
-  gap: 60px;
-}
-
-.trainer-card {
-  position: relative;
-  width: 250px;
-  height: 350px;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  flex-direction: row;
+  gap: 80px;
 }
 
 
-.trainer-card:hover {
-  transform: scale(1.05);
-}
 
-.trainer-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
+
 
 .card-info {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
   padding: 30px;
   background-color: #2a2a72;
   color: white;
   text-align: center;
-  transform: translateY(100%);
-  transition: transform 0.3s;
-  clip-path: polygon(4% 41%, 14% 41%, 14% 25%, 86% 25%, 86% 37%, 96% 37%, 96% 85%, 85% 85%, 85% 95%, 14% 95%, 14% 85%, 4% 84%);
+  transform: translateY(5%);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in, clip-path 1s ease-in;
 }
-
-.trainer-card:hover .card-info {
+.card-info:hover {
+  opacity: 1; /* Fotoğraf görünür hale gelir */
+}
+.image-container:hover .card-info {
   transform: translateY(0);
 }
 
@@ -468,35 +470,92 @@ h2{
 }
 
 
+.image-container:hover {
+  transform: scale(1.03);
+}
 
-.main-image {
-  width: 100%;
+.image-container {
+  position: relative;
+  padding: 0px;
+  background-color: white;
+  border: 1px solid gold;
+  transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+.styled-image {
+  display: block;
+  max-width: 300px;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease; /* Smooth scaling */
 }
-.border-line {
+
+.border-vertical, .border-horizontal {
   position: absolute;
-  background-color: #1159ac;
-  transition: all 0.4s ease;
+  background-color: #4363d8;
+  transition: all 0.3s ease; /* Smooth transition for size and color change */
 }
-.top, .bottom {
-  height: 10px;
-  width: 40%;
-  left: 30%;
-}
-.left, .right {
+
+.border-vertical {
   width: 10px;
-  height: 60%;
-  top: 20%;
+  height: 100px;
 }
-.top { top: -5px; }
-.bottom { bottom: -5px; }
-.left { left: -5px; }
-.right { right: -5px; }
-.trainer-card:hover .top { transform: translateY(5px); }
-.trainer-card:hover .bottom { transform: translateY(5px); }
-.trainer-card:hover .left { transform: translateX(5px); }
-.trainer-card:hover .right { transform: translateX(-5px); }
+
+.border-horizontal {
+  height: 10px;
+  width: 100px;
+}
+
+/* Left vertical border */
+.border-vertical.left {
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Right vertical border */
+.border-vertical.right {
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Top horizontal border */
+.border-horizontal.top {
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Bottom horizontal border */
+.border-horizontal.bottom {
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Hover Effect */
+
+/* Hovering over the image container */
+
+
+/* Increase the size of borders on hover */
+.image-container:hover .border-vertical {
+  height: 150px; /* Increase vertical border height */
+}
+
+.image-container:hover .border-horizontal {
+  width: 150px; /* Increase horizontal border width */
+}
+
+/* Optional: Scale up the image slightly on hover */
+
+
+
+
+
+
+ 
 
 
 
@@ -541,6 +600,7 @@ h2{
   padding: 15px;
 }
 .product-name {
+  text-align: center;
   font-weight: bold;
   margin: 0 0 10px 0;
 }
@@ -641,15 +701,27 @@ h2{
   box-sizing: border-box;
   text-align: left;
 }
+
+.speech-bubble::before {
+  content: '';
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-top: 20px solid #8197BF;
+    position: absolute;
+    bottom: -20px;
+    left:0;
+}
 .speech-bubble::after {
   content: '';
+  width: 0;
+  height: 0;
+  border-right: 40px solid transparent;
+  border-top: 20px solid #8197BF;
   position: absolute;
-  top: -20px;
-  left: 50%;
-  border: 10px solid transparent;
-  border-bottom-color: #3b5998;
-  transform: translateX(-50%);
-  clip-path: polygon(0 52%, 0% 100%, 51% 100%);
+  bottom: -20px;
+  left: 23.7em;
+ 
 }
 
 p {
@@ -657,16 +729,7 @@ p {
   font-size: 0.9em;
   line-height: 1.2;
 }
-.üçgen1 {
-  position: absolute;
-  bottom: -49px;
-  left: 0px;
-  width: 50px;
-  height: 50px;
-  background-color: #7373a5;
-  clip-path: polygon(0 0, 100% 0, 100% 100%);
-  
-}
+
 
 
 /* iletişim bölümü */
@@ -774,7 +837,7 @@ p {
 @media (max-width: 576px) {
 
   .navbar{
-    display: flex;
+    
     gap: 200px;
     padding: 10px 50px;
   }
@@ -804,6 +867,10 @@ p {
       margin-left: 20px;
         padding: 10px 15px;
     }
+    .heroback {
+      height: 45em;
+      width: 100%;
+    }
     .hero-content h2 {
         font-size: 28px;
     }
@@ -817,22 +884,36 @@ p {
         width: 100%;
     }
 
+    
+    
+    
     .stats {
-      flex-direction: column; /* 576px altında stat-item'ların alt alta gelmesini sağlar */
+      flex-direction: column;
+      align-items: center;
     }
   
     .stat-item {
-      margin: 15px 0; /* Daha fazla boşluk bırakır */
+      margin: 15px 0;
     }
 
-
-
-    .class-buttons {
+    .container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Butonları ikili olarak dizmek için */
-      gap: 80px;
+      grid-template-columns: repeat(2, 1fr);
     }
-
+    .classes {
+      flex-direction: column;
+    }
+    .classes .class-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px 40px;
+      margin-top: 24px;
+  } 
+    
+  .p-our{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
     .content {
       flex-direction: column;
       text-align: center;
@@ -851,54 +932,64 @@ p {
 
 
 
-    .container-1 {
+    .bmıcontainer {
       flex-direction: column;
       align-items: center;
-      margin-left: -150px;
-    }
-  
-    .bmi-chart {
-      display: flex;
-      margin-top: 400px;
-      margin-left: -650px;
-    }
-    
-    .bmi-calculator {
-     display: block;
-    }
+      height: 800px;
+  }
 
-    .bmi-calculator input {
-      width: 100%;
-      margin: 10px 0;
-    }
-  
-    .result-2 {
-      margin-top: 10px;
-    }
+  .input-section {
+    flex-direction: column;
+  }
 
+  .bmıcalcu {
+      text-align: left;
+  }
+  .bmıcalcu h1 {
+    font-size: 60px;
+  }
 
-
-    .trainers-section p {
-      font-size: large;
-      text-align: center;
-    }
-
-    .trainers-cards {
-      flex-direction: column;
-    }
-  
-    .trainer-card {
-      width: 100%;
+  .lorem-text {
+      text-align: left;
       margin-bottom: 20px;
-    }
+  }
+
+  .input-group input {
+      width: calc(100% - 50px);
+  }
+  
+  .result-section {
+      margin-top: 10px;
+      margin-left: 220px;
+  }
+
+  .bmi-chart h1 {
+    margin-bottom: 50px;
+  }
+
+
+  .trainers-section {
+    height: 1600px;
+      align-items: center;
+  }
+  .trainers-section p {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+
+   .trainer3 {
+    flex-direction: column;
+   }
 
 
 
-   .container2 {
-    height: 1700px;
+
+
+
+  .container2 {
+    height: 2200px;
    }
     .product-grid {
-      display: grid;
       grid-template-columns: repeat(1, 1fr);
       width: 50%;
       gap: 10px;
@@ -908,31 +999,50 @@ p {
       width: 100%;
       margin-bottom: 20px;
     }
-
+    .purchasep {
+      text-align: center;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
     
 
     .container3 {
-      height: 900px;
-      margin-top: 500px;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    padding: 10px;
     }
     
+    .traniner-client{
+      margin-top: 0;
+    }
+
     .purc {
-      padding: 30px;
+      margin-right: 40px;
+      margin-left: 40px;
     }
 
     .review {
       flex-direction: column;
       align-items: center;
-      justify-items: center;
+      height: 700px;
+
     }
 
     .card3 {
       margin-right: 80px;
+      margin-bottom: 50px;
     }
 
     .card4 {
       margin-left: 80px;
     }
+
+    .speech-bubble::after {
+      margin-left: -150px;
+    }
+
+
 
 
 
@@ -942,7 +1052,8 @@ p {
     }
     
     .purccontact {
-      padding: 10px;
+      margin-left: 40px;
+      margin-right: 40px;
     }
 
     .contact-info {
@@ -960,7 +1071,7 @@ p {
     }
 
     .map-section {
-      margin-left: 180px;
+     margin-left: 150px;
     }
 
     .contact-info,
@@ -974,6 +1085,7 @@ p {
       width: 80%;
     }
 
+    
 
 
 
