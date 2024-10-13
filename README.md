@@ -34,3 +34,5 @@ JavaScript: Etkileşimli özellikler, örneğin BMI hesaplayıcı ve sınıf se�
 #Eğitmen ve ürün kartları, küçük ekranlarda tek sütun haline getirilmiştir.
 Sınıflar ve iletişim formu daha küçük ekranlarda yeniden düzenlenmiştir.
 Mobil cihazlarda kullanım için optimize edilmiş menü ve navigasyon.
+
+#netlify canlı linki: https://grand-crepe-d703ec.netlify.app/
