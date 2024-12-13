@@ -1,38 +1,40 @@
-#Fitness Web Sitesi
+# Fitness Website
 
-#Özellikler
-Ana Sayfa: Spor salonu hakkında tanıtım, verilen hizmetler ve müşteri yorumları.
+## Features
+- **Home Page**: Introduction about the gym, provided services, and customer reviews.
+- **Trainers Section**: Information about top trainers and their areas of expertise.
+- **Classes Section**: Different fitness classes (Yoga, Group Training, etc.) and class schedules.
+- **Product Purchase**: View and purchase fitness equipment.
+- **Contact Form**: Contact trainers and locate the gym on a map.
+- **BMI Calculator**: A tool that allows users to calculate their Body Mass Index (BMI).
 
-Eğitmenler Bölümü: En iyi eğitmenler hakkında bilgi ve uzmanlık alanları.
+## Technologies Used
+- **HTML5**: Structure and layout of the website.
+- **CSS3**: Styling, animations, and responsive design.
+- **JavaScript**: Interactive features, such as the BMI calculator and class selection.
 
-Sınıflar Bölümü: Farklı fitness dersleri (Yoga, Grup Eğitimi vb.) ve ders saatleri.
+## Pages
+### Home Page
+Learn about the gym and trainers.
 
-Ürün Satın Alma: Fitness ekipmanlarını görüntüleme ve satın alma.
+### Classes
+Explore available fitness classes and check schedules.
 
-İletişim Formu: Eğitmenlerle iletişime geçme ve harita üzerinde salon lokasyonu.
+### Product Purchase
+Add products to your cart and make purchases.
 
-BMI Hesaplayıcı: Kullanıcıların Vücut Kitle İndeksini (BMI) hesaplamalarını sağlayan araç.
+### Contact Form
+Reach out to trainers through the contact form.
 
-#Kullanılan Teknolojiler
-HTML5: Web sitesinin yapısı ve düzeni.
-CSS3: Stil, animasyonlar ve duyarlı tasarım (responsive design).
-JavaScript: Etkileşimli özellikler, örneğin BMI hesaplayıcı ve sınıf seçimi.
+### BMI Calculator
+Calculate your Body Mass Index to track your health.
 
-#Ana Sayfa: Spor salonu ve eğitmenler hakkında bilgilere ulaşın.
+## Responsive Design
+This website is specifically designed to adapt to screen sizes of 576px and below.
 
-#Sınıflar: Mevcut fitness derslerine göz atın ve programları inceleyin.
-
-#Ürün Satın Alma: Ürünleri sepete ekleyip satın alabilirsiniz.
-
-#İletişim Formu: İletişim formu aracılığıyla eğitmenlerle iletişime geçin.
-
-#BMI Hesaplayıcı: Vücut Kitle İndeksinizi hesaplayarak sağlığınızı izleyin.
-
-#Duyarlı Tasarım:Bu web sitesi, özellikle 576px ve altındaki ekran boyutlarına uyumlu olacak şekilde tasarlanmıştır.
+- Trainer and product cards are displayed in a single-column layout on smaller screens.
+- Classes and the contact form are reorganized for smaller screens.
+- The menu and navigation are optimized for mobile devices.
 
 
-#Eğitmen ve ürün kartları, küçük ekranlarda tek sütun haline getirilmiştir.
-Sınıflar ve iletişim formu daha küçük ekranlarda yeniden düzenlenmiştir.
-Mobil cihazlarda kullanım için optimize edilmiş menü ve navigasyon.
-
-#netlify canlı linki: https://grand-crepe-d703ec.netlify.app/
+#netlify live link: https://grand-crepe-d703ec.netlify.app/
